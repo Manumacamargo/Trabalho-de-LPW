@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.musica-item {
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: #ccc;
+
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.musica-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+}
+
+
+.musica-item .btn-delete {
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+/*responsividade */
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .card-body.d-flex {
+        flex-direction: column;
+        gap: 1rem; 
+    }
+}
