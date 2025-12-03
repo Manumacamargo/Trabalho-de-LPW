@@ -120,3 +120,8 @@ nav.bg-white {
 .modal-content { border-radius: 16px; border: none; }
 .modal-header { background-color: var(--bg-soft); color: var(--bg-darkest); }
 footer button { color: var(--bg-dark) !important; }
+
+#banana {
+  display: block;
+  margin: 0 auto;
+}
