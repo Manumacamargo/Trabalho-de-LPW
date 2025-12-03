@@ -1,0 +1,122 @@
+/* =========================================
+   VARIAVEIS DE CORES (PALETA HARMONIOUS)
+   ========================================= */
+:root {
+    --bg-darkest:   #190019; /* Navbar/Footer */
+    --bg-dark:      #2B124C; /* Botões/Títulos */
+    --bg-mid:       #522B5B; /* Hover */
+    --bg-accent:    #854F6C; /* Detalhes/Vinho */
+    --bg-soft:      #DFB6B2; /* Rosa Antigo */
+    --bg-lightest:  #FBE4D8; /* Fundo Creme */
+    --text-main:    #190019;
+    --text-white:   #ffffff;
+}
+
+body {
+    background-color: var(--bg-lightest) !important;
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main { flex: 1; }
+
+h1, h2, h3, h4, h5, h6 { color: var(--bg-dark); font-weight: 700; }
+
+/* NAVBAR & HEADER */
+.bg-dark, header.bg-dark {
+    background-color: var(--bg-darkest) !important;
+    border-bottom: 4px solid var(--bg-mid);
+}
+
+header h1 { color: var(--bg-lightest) !important; }
+
+nav.bg-white {
+    background-color: var(--bg-darkest) !important;
+    box-shadow: 0 4px 10px rgba(25, 0, 25, 0.2) !important;
+    border-bottom: none !important;
+}
+
+.nav-link {
+    color: var(--bg-soft) !important;
+    font-weight: 500;
+    margin: 0 5px;
+    border-radius: 50px;
+    padding: 8px 20px !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: var(--bg-mid);
+    color: var(--text-white) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* CARDS */
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(43, 18, 76, 0.08);
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: var(--bg-soft);
+    color: var(--bg-darkest);
+    border-bottom: none;
+    font-weight: bold;
+    padding: 15px 20px;
+}
+
+.musica-item {
+    background-color: white;
+    margin-bottom: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 12px;
+}
+
+.musica-item:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 15px rgba(82, 43, 91, 0.15) !important;
+}
+
+/* FORMULÁRIOS & BOTÕES */
+.form-control, .form-select {
+    border: 2px solid var(--bg-soft);
+    border-radius: 12px;
+    background-color: #fff;
+    color: var(--bg-darkest);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--bg-dark);
+    box-shadow: 0 0 0 0.25rem rgba(43, 18, 76, 0.25);
+}
+
+.btn-primary { background-color: var(--bg-dark); border-color: var(--bg-dark); }
+.btn-success { background-color: var(--bg-accent); border-color: var(--bg-accent); }
+
+.btn-primary:hover, .btn-success:hover {
+    background-color: var(--bg-mid);
+    border-color: var(--bg-mid);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-outline-danger {
+    color: var(--bg-accent);
+    border-color: var(--bg-accent);
+    border-radius: 50%;
+    width: 38px; height: 38px;
+    display: flex; align-items: center; justify-content: center;
+}
+.btn-outline-danger:hover { background-color: var(--bg-accent); color: white; }
+
+/* BADGES & MODAIS */
+.badge { padding: 6px 12px; border-radius: 8px; }
+.modal-content { border-radius: 16px; border: none; }
+.modal-header { background-color: var(--bg-soft); color: var(--bg-darkest); }
+footer button { color: var(--bg-dark) !important; }

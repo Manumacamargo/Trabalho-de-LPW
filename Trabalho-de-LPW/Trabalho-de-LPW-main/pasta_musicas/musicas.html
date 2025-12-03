@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Tracker - Lista</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="../pasta_home/index.css">
+</head>
+<body>
+
+<header class="container-fluid bg-dark text-white p-4 shadow-sm">
+    <h1 class="text-center">Music Tracker</h1>
+</header>
+
+<nav class="bg-white shadow-sm border-bottom">
+    <ul class="nav justify-content-center py-3">
+        <li class="nav-item"><a class="nav-link" href="../pasta_home/index.html">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="../pasta_home/categorias.html">Categorias</a></li>
+        <li class="nav-item"><a class="nav-link active" href="musicas.html">Músicas</a></li>
+        <li class="nav-item"><a class="nav-link" href="../pasta_home/sobre.html">Sobre</a></li>
+    </ul>
+</nav>
+
+<main class="container mt-4">
+    <div class="card shadow-sm mb-4">
+        <div class="card-body d-flex flex-wrap justify-content-between align-items-center gap-3">
+            <h4 class="m-0">Minhas Músicas</h4>
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+                <input type="text" class="form-control w-auto" id="busca-musica" placeholder="Buscar música...">
+                <select class="form-select w-auto" id="filtro-categoria">
+                    <option value="todas">Todas</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div id="lista-musicas"></div>
+</main>
+
+<div class="modal fade" id="modal-confirm-delete" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Apagar Música?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Tem a certeza que deseja excluir:</p>
+        <h5 id="musica-a-deletar" class="text-danger fw-bold"></h5>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" id="btn-confirm-delete">Sim, Deletar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
