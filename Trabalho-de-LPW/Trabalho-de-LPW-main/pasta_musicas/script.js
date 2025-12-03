@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (nome) {
-                categorias.push({ nome, cor });
+                categorias.unshift({ nome, cor });
                 salvarCategorias();
                 renderizarDropdowns();
                 renderizarListaCategorias();
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const categoria = selectCategoriaMusica.value;
             
             if (titulo && categoria) {
-                musicas.push({ titulo, artista, categoria });
+                musicas.unshift({ titulo, artista, categoria });
                 salvarMusicas();
                 formMusica.reset();
                 mostrarToast(`Música adicionada!`);
@@ -270,4 +270,5 @@ document.addEventListener('DOMContentLoaded', () => {
     renderizarDropdowns();
     renderizarMusicas();
     renderizarListaCategorias();
+
 });
